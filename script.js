@@ -16,15 +16,7 @@ generateButton.addEventListener('click', function () {
     return;
   }
 
-  // Hide the Generate button
-  generateButton.style.display = 'none';
-
-  // Enable the result box for flipping
-  resultBox.addEventListener('click', function flipCard() {
-    generateRandomNumber(min, max); // Generate random number
-  });
-
-  // Generate the first random number
+  // Generate random number
   generateRandomNumber(min, max);
 });
 
