@@ -93,3 +93,24 @@ body {
 #generate-button:active {
   background-color: #004085;
 }
+
+/* Footer styling */
+.credit-message {
+  font-size: 14px;
+  color: #666;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #f8f8f8;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
+
+.credit-message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.credit-message a:hover {
+  text-decoration: underline;
+}
