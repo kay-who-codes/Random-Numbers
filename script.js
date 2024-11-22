@@ -1,7 +1,14 @@
-document.getElementById('generate-button').addEventListener('click', function () {
+// Select DOM elements
+const resultBox = document.getElementById('result-box');
+const generateButton = document.getElementById('generate-button');
+const minValueInput = document.getElementById('min-value');
+const maxValueInput = document.getElementById('max-value');
+
+// Add event listener to the Generate button
+generateButton.addEventListener('click', function () {
   // Get user inputs
-  const min = parseInt(document.getElementById('min-value').value, 10);
-  const max = parseInt(document.getElementById('max-value').value, 10);
+  const min = parseInt(minValueInput.value, 10);
+  const max = parseInt(maxValueInput.value, 10);
 
   // Validate inputs
   if (isNaN(min) || isNaN(max) || min > max) {
@@ -9,16 +16,30 @@ document.getElementById('generate-button').addEventListener('click', function ()
     return;
   }
 
-  // Generate random number
+  // Hide the Generate button
+  generateButton.style.display = 'none';
+
+  // Enable the result box for flipping
+  resultBox.addEventListener('click', function flipCard() {
+    generateRandomNumber(min, max); // Generate random number
+  });
+
+  // Generate the first random number
+  generateRandomNumber(min, max);
+});
+
+// Function to generate a random number and display it
+function generateRandomNumber(min, max) {
+  // Generate a random number
   const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
-  // Update result box with blur animation
-  const resultBox = document.getElementById('result-box');
+  // Add blur animation
   resultBox.classList.remove('blur-animation');
   void resultBox.offsetWidth; // Trigger reflow to restart animation
   resultBox.classList.add('blur-animation');
 
+  // Update the result box after animation
   setTimeout(() => {
     resultBox.textContent = randomNumber;
   }, 300); // Matches the animation duration
-});
+}
