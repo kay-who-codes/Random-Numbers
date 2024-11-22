@@ -4,4 +4,4 @@ Just enter your desired minimum value, and maximum value, then hit the GENERATE 
 
 Use it **[HERE](https://kay-who-codes.github.io/random-numbers/)**
 
-Share with your friends and/or click the star button! 
+If you like it, please share it with your friends and/or click the star button! 
