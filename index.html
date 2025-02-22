@@ -5,20 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🔢 Random Number Generator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
 </head>
 <body>
+<!-- Header Bar -->
+<div id="header"></div>
+
+<!-- Main Content -->
   <div id="app">
-    <!-- Results Box -->
-    <div id="result-box">Random Number Generator</div>
+    <!-- Results Box (Now Clickable) -->
+    <div id="result-box">Generate Random Number</div>
 
     <!-- Input Boxes -->
     <div id="input-container">
       <input type="number" id="min-value" value="1" placeholder="Minimum Number">
       <input type="number" id="max-value" placeholder="Maximum Number">
     </div>
-
-    <!-- Generate Button -->
-    <button id="generate-button">GENERATE</button>
   </div>
   
   <footer class="credit-message">
@@ -26,5 +28,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="header.js" defer></script>  
 </body>
 </html>

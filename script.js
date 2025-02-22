@@ -1,11 +1,10 @@
 // Select DOM elements
 const resultBox = document.getElementById('result-box');
-const generateButton = document.getElementById('generate-button');
 const minValueInput = document.getElementById('min-value');
 const maxValueInput = document.getElementById('max-value');
 
-// Add event listener to the Generate button
-generateButton.addEventListener('click', function () {
+// Add event listener to the result box
+resultBox.addEventListener('click', function () {
   // Get user inputs
   const min = parseInt(minValueInput.value, 10);
   const max = parseInt(maxValueInput.value, 10);
